@@ -1,0 +1,25 @@
+﻿@model IEnumerable<GitHubBranch>
+@{
+    ViewData["Title"] = "Github";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Github Branches</h1>
+    <p>Learn about <a href="https://api.github.com/repos/dotnet/AspNetCore.Docs/branches">Typed Clients Branches: </a>.</p>
+    <div><b>Typed Clients</b><br /></div>
+    <table class="table table-bordered table-responsive table-hover">
+        <tr>
+            <th>Name</th>
+            <th>Url</th>
+            <th>Protected</th>
+        </tr>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <td>@d.Name</td>
+                <td>@d.GitCommit.Url</td>
+                <td>@d.Protected</td>
+            </tr>
+        }
+    </table>
+</div>
