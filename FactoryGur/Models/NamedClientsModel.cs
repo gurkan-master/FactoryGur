@@ -13,7 +13,7 @@ namespace FactoryGur.Models
         public IEnumerable<GitHubBranch>? GitHubBranches { get; set; }
 
         public async Task OnGet()
-        {
+        {//test
             var httpClient = _httpClientFactory.CreateClient("GitHub");
             var httpResponseMessage = await httpClient.GetAsync(
                 "repos/dotnet/AspNetCore.Docs/branches");
